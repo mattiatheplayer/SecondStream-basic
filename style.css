@@ -1,0 +1,413 @@
+/* Style for body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 80px; /* Space for the footer */
+    scrollbar-color: #1DB954 #121212; /* thumb e track */
+    scrollbar-width: thin; /* Larghezza sottile */
+}
+
+/* Style for h1 */
+h1 {
+    color: #1DB954;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #1DB954;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Stile per l'intera scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Larghezza della scrollbar */
+}
+
+/* Stile per la parte scorrevole della scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #282828; /* Colore del thumb (parte scorrevole) */
+    border-radius: 6px; /* Angoli arrotondati */
+    border: 3px solid transparent; /* Spazio attorno al thumb */
+    background-clip: content-box; /* Clip per rendere il bordo trasparente visibile */
+}
+
+/* Stile per il track (la traccia su cui scorre il thumb) */
+::-webkit-scrollbar-track {
+    background-color: #121212; /* Colore del track */
+    border-radius: 6px; /* Angoli arrotondati */
+}
+
+.current-track-info {
+    display: none; /* Nascondi di default */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.current-track-info.show {
+    display: block; /* Mostra quando necessario */
+}
+
+.track-details-container {
+    display: flex;
+    align-items: center;
+}
+
+.current-track-cover {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.current-track-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.current-track-title {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.current-track-details {
+    font-size: 1em;
+    color: #CCCCCC;
+    margin-top: 5px;
+}
+
+/* Style for audio container */
+.audio-container {
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.audio-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.audio-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Occupa lo spazio rimanente */
+}
+
+.audio-text .track-title {
+    margin: 0;
+    font-size: 1.2em; /* Grandezza normale per il titolo */
+    color: #FFFFFF; /* Colore bianco per il titolo */
+}
+
+.audio-text .track-details {
+    font-size: 0.9em; /* Grandezza più piccola */
+    color: #CCCCCC; /* Colore grigio chiaro */
+    margin-top: 5px;
+}
+
+.audio-container:hover {
+    background-color: #1DB954;
+}
+
+/* Style for audio container paragraph */
+.audio-container p {
+    margin: 0;
+    font-size: 1.2em;
+    flex-grow: 1;
+}
+
+/* Style for footer */
+footer {
+    background: linear-gradient(135deg, #333 100%, #5b5b5b 10%);
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.3); /* Ombra per un aspetto stiloso */
+    transition: background 1s ease;
+}
+
+.footer-content {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Stile per il container della barra di ricerca */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #121212; /* Sfondo dello stesso colore del body per continuità */
+    z-index: 1000; /* Assicura che la barra di ricerca sia sopra altri elementi */
+    padding: 10px 0;
+}
+
+/* Sezione di benvenuto e informazioni sulla traccia corrente */
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#welcomeText.hide {
+    display: none;
+}
+
+#currentTrackInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#currentTrackInfo.hide {
+    display: none;
+}
+
+#currentTrackDetails {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#currentCoverArt {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+/* Style adjustments for current track text */
+#currentTrackDetails .track-title {
+    font-size: 1.5em;
+}
+
+#currentTrackDetails .track-details {
+    font-size: 1em;
+    color: #CCCCCC;
+}
+
+
+/* Stile per il pulsante dei filtri */
+#filterButton {
+    background-color: #1DB954;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+#filterButton:hover {
+    background-color: #1AAB4E;
+}
+
+/* Stile per il menu a discesa dei filtri */
+.filter-menu {
+    display: none; /* Nascondi per default */
+    position: fixed; /* Posizionamento fisso */
+    top: 50%; /* Centrato verticalmente */
+    left: 50%; /* Centrato orizzontalmente */
+    transform: translate(-50%, -50%); /* Centra esattamente */
+    width: 50%; /* Larghezza del menu */
+    max-width: 200px; /* Larghezza massima ridotta */
+    background-color: #121212; /* Sfondo dello stesso colore del body */
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra */
+    z-index: 2000; /* Assicurati che sia sopra altri elementi */
+    padding: 20px; /* Padding interno */
+    color: #FFFFFF; /* Testo bianco */
+    text-align: center; /* Testo centrato */
+}
+
+/* Mostra il menu */
+.filter-menu.show {
+    display: block; /* Mostra il menu */
+}
+
+/* Stile per le opzioni dei filtri */
+.filter-menu label {
+    display: block;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-size: 1em; /* Font size coerente */
+}
+
+.filter-menu input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Stile per il titolo del menu dei filtri */
+.filter-menu h3 {
+    color: #1DB954;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* Stile per la barra di ricerca degli artisti */
+#artistSearch {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #FFFFFF;
+    text-align: left; /* Centratura del testo per coerenza visiva */
+}
+
+#artistSearch::placeholder {
+    color: #888888;
+}
+
+/* Stile per il contenitore delle opzioni dei filtri */
+.filter-options {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding-left: 0; /* Rimuove il padding sinistro */
+    list-style: none; /* Rimuove i puntini di default */
+}
+
+/* Stile per le opzioni dei filtri */
+.filter-options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.filter-options input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #1DB954; /* Colore per il checkmark */
+}
+
+/* Stile per la barra di ricerca */
+#searchBar {
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #282828;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Stile per il placeholder del campo di input */
+#searchBar::placeholder {
+    color: #888888;
+}
+
+/* Stile per la barra di ricerca al focus */
+#searchBar:focus {
+    outline: none;
+    background-color: #1DB954;
+    color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for player controls */
+#playerControls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Style for player controls button */
+#playerControls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#playerControls button:hover {
+    color: #1DB954;
+}
+
+/* Style for seek bar */
+#seekBar {
+    flex-grow: 1;
+    margin-top: 10px;
+    margin: 0 10px;
+    width: calc(100% - 100px);
+}
+
+/* Style for responsive player controls */
+@media (max-width: 600px) {
+    #playerControls {
+        flex-direction: column;
+    }
+
+    #playerControls button {
+        margin: 10px 0;
+    }
+
+    #seekBar {
+        width: 100%;
+    }
+}
+
+/* Stile per il design responsive del menu dei filtri */
+@media (max-width: 480px) {
+    .filter-menu {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .filter-menu h3 {
+        font-size: 1.2em;
+    }
+
+    .filter-menu input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    .filter-options label {
+        font-size: 0.9em;
+    }
+
+    #artistSearch {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecondStream</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <body>
+        <div id="header">
+            <h1 id="welcomeText">Benvenuto in SecondStream</h1>
+            <div id="currentTrackInfo" class="hide">
+                <h2>Stai ascoltando...</h2>
+                <div id="currentTrackDetails">
+                    <img id="currentCoverArt" src="" alt="Cover Art">
+                    <div>
+                        <p id="currentTitle" class="track-title"></p>
+                        <p id="currentDetails" class="track-details"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Barra di Ricerca -->
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Cerca canzone, artista o album...">
+        <button id="filterButton">Filtri <i class="fas fa-filter"></i></button>
+    </div>
+
+    <!-- Lista delle Canzoni -->
+    <div id="audioList" class="audio-list"></div>
+
+
+    <!-- Footer con i Controlli -->
+    <footer>
+        <div id="playerControls">
+            <div>
+                <button id="prev"><i class="fas fa-backward"></i></button>
+                <button id="playPause"><i class="fas fa-play"></i></button>
+                <button id="next"><i class="fas fa-forward"></i></button>
+            </div>
+            <input type="range" id="seekBar" value="0" max="100">
+        </div>
+    </footer>
+
+    <!-- Menu dei Filtri -->
+    <div id="filterMenu" class="filter-menu hide">
+        <h3>Filtra per Artista</h3>
+        <div class="search-container">
+            <input type="text" id="artistSearch" placeholder="Cerca artista...">
+        </div>
+        <div id="artistFilters" class="filter-options"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
